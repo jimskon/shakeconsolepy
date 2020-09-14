@@ -19,10 +19,6 @@ def lookupWords(index,filename):
       print(searchTerm,"not found,")
     searchTerm=input("\nEnter word to look up, return to end:")
 
-def printLines(book,lines):
-  for line in lines:
-    print(book[line])
-
 file="Shakespeare.txt"
 wordIndex=textindex(file)
 print("Total words:",wordIndex.wordcount())
