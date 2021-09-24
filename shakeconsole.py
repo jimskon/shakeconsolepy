@@ -9,6 +9,7 @@ def lookupWords(index,filename):
 
   while searchTerm !="":
     positions=index.lookup(searchTerm)
+    print (positions)
     if len(positions)>0:
       textfile=open(filename,"r")
       for pos in positions:
@@ -19,7 +20,7 @@ def lookupWords(index,filename):
       print(searchTerm,"not found,")
     searchTerm=input("\nEnter word to look up, return to end:")
 
-file="Shakespeare.txt"
+file="/home/class/shake/Shakespeare.txt"
 wordIndex=textindex(file)
 print("Total words:",wordIndex.wordcount())
 lookupWords(wordIndex,file)
